@@ -17,3 +17,9 @@ def submit_query():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+import os
+
+token = os.getenv("MY_SECRET_TOKEN")
+if not token:
+    raise ValueError("MY_SECRET_TOKEN is not set!")
