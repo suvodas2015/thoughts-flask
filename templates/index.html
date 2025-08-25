@@ -213,35 +213,42 @@ document.addEventListener("DOMContentLoaded", initGallery);
 
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="contact-container">
-      <div class="contact-card contact-form">
-        <h2>Send Us a Message</h2>
-        <form action="#" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-
-      <div class="contact-card contact-details">
-        <h2>Contact Information</h2>
-        <p><strong>Email:</strong> info@thoughtscom.co.in</p>
-        <p><strong>Phone:</strong> +918583966708</p>
-        <p><strong>Address:</strong> Kolkata, India</p>
-
-        <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-
-        <p class="copyright">© 2025 Thoughts. All rights reserved.</p>
-      </div>
+<section id="contact" class="contact">
+  <div class="contact-container">
+    <div class="contact-card contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </div>
-  </section>
+
+    <div class="contact-card contact-details">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> info@thoughtscom.co.in</p>
+      <p><strong>Phone:</strong> +918583966708</p>
+      <p><strong>Address:</strong> Kolkata, India</p>
+
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <!-- Legal links ONLY here -->
+      <div class="legal-links">
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+        <span class="sep">|</span>
+        <a href="{{ url_for('terms') }}">Terms of Service</a>
+      </div>
+
+      <p class="copyright">© 2025 Thoughts. All rights reserved.</p>
+    </div>
+  </div>
+</section>
 
   <script>
     const hamburger = document.querySelector('.hamburger');
@@ -253,22 +260,4 @@ document.addEventListener("DOMContentLoaded", initGallery);
   </script>
 </body>
 </html>
-
-<footer>
-  <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
-  <a href="{{ url_for('terms') }}">Terms of Service</a>
-</footer>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-
-  <!-- Phone (primary business line) -->
-  <p>Phone: <a href="tel:+919830051812">+91 XXXXX XXXXX</a></p>
-
-  <!-- WhatsApp (your WABA sender) -->
-  <p>WhatsApp: <a href="https://wa.me/918583966708" rel="noopener">Chat with us on WhatsApp</a></p>
-
-  <p>Email: <a href="mailto:info@thoughtscom.co.in">info@thoughtscom.co.in</a></p>
-</section>
-
 
