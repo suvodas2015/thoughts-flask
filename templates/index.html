@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="facebook-domain-verification" content="p5pu80fhrwj1lrpc648pfyft5z0pd6" />
   <title>THOUGHTS</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -20,21 +20,25 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+  <header class="site-header">
+  <div class="container nav-wrap">
+    <a class="site-logo" href="/"><img src="/static/images/logo.png" alt="Thoughts"></a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="/">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -56,10 +60,10 @@
 
 
   <!-- About Section -->
-  <section id="about" class="section about">
-    <div class="about-container">
-      <div class="about-text fade-in">
-        <h2>About Us</h2>
+  <section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <h2>About Us</h2>
         <p>For over two decades, we have been at the forefront of pharmaceutical advertising and communications, partnering with some of the most respected healthcare and life sciences companies.</p>
         <p>We specialize in new product launches, helping brands create powerful first impressions and establish a strong market presence. From strategic positioning to execution, we craft communication that resonates with healthcare professionals and patients alike.</p>
         <p>Our expertise extends to producing audio-visual content that educates, informs, and engages — whether it’s for marketing campaigns, medical education, or product-specific narratives.</p>
@@ -67,6 +71,13 @@
         <p>Most recently, we have embraced the power of Generative AI and LLM-based chatbot solutions, helping pharmaceutical companies deliver personalized, intelligent & compliant communication.</p>
         <p>For us, every project is an opportunity to blend creativity, technology, and science — ensuring our clients stay ahead in an increasingly competitive and regulated market.</p>
       </div>
+
+      <div class="about-media">
+      <img src="/static/images/about.jpg" alt="About Thoughts">
+    </div>
+  </div>
+</section>
+
 
       <div class="about-image fade-in">
         <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About Us">
@@ -124,9 +135,38 @@
 
 
   <!-- Gallery Section -->
-<section class="gallery">
-  <h2>Our Gallery</h2>
-  <p class="tagline">A glimpse into our work and creativity</p>
+
+<section id="gallery" class="gallery">
+  <div class="container">
+    <h2>Our Gallery</h2>
+    <p class="tagline">A glimpse into our work and creativity</p>
+
+
+    <div class="gallery-grid">
+      <!-- Each image -->
+      <figure class="g-item">
+        <img src="/static/images/gallery1.jpg" alt="Gallery 1" loading="lazy">
+      </figure>
+      <figure class="g-item">
+        <img src="/static/images/gallery2.jpg" alt="Gallery 2" loading="lazy">
+      </figure>
+      <figure class="g-item">
+        <img src="/static/images/gallery3.jpg" alt="Gallery 3" loading="lazy">
+      </figure>
+      <figure class="g-item">
+        <img src="/static/images/gallery4.jpg" alt="Gallery 4" loading="lazy">
+      </figure>
+      <figure class="g-item">
+        <img src="/static/images/gallery5.jpg" alt="Gallery 5" loading="lazy">
+      </figure>
+      <figure class="g-item">
+        <img src="/static/images/gallery6.jpg" alt="Gallery 6" loading="lazy">
+      </figure>
+
+    </div>
+  </div>
+</section>
+
 
   <div class="gallery-container">
     <button class="gallery-arrow left" onclick="prevSlide()">&#10094;</button>

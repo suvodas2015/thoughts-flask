@@ -165,3 +165,12 @@ function prevSlide() {
 
 document.addEventListener("DOMContentLoaded", initGallery);
 </script>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('siteNav');
+  btn?.addEventListener('click', () => {
+    const open = nav.classList.toggle('show');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
